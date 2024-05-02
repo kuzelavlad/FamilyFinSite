@@ -20,7 +20,6 @@ class SignUpForm(UserCreationForm):
     username = forms.CharField(label='Username', validators=[validate_username])
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput, min_length=8)
     password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput, min_length=8)
-    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
 
     class Meta:
         model = User
